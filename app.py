@@ -29,8 +29,6 @@ def search_protein(name):
     }
 
     response = requests.post(url, json=query)
-    print(response.status_code)
-    print(response.text[:500])
 
     if response.status_code == 200:
         return response.json()
